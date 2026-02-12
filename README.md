@@ -18,11 +18,40 @@ gcc main.c encode.c decode.c -o stego
 
 ## How to Run
 
+## Sample Execution
+
 ### Encoding
-./stego -e input.bmp secret.txt output.bmp
+
+$ gcc *.c
+$ ./a.out -e beautiful.bmp secret.txt stego.bmp
+
+INFO: ## Encoding Procedure Started ##
+INFO: Opening required files
+INFO: Opened beautiful.bmp
+INFO: Opened secret.txt
+INFO: Opened stego.bmp
+INFO: Encoding Magic String Signature
+INFO: Encoding secret.txt File Extension
+INFO: Encoding secret.txt File Size
+INFO: Encoding secret.txt File Data
+INFO: ## Encoding Done Successfully ##
+
+Encoding is successful!
 
 ### Decoding
-./stego -d output.bmp
+
+$ ./a.out -d stego.bmp decoded.txt
+
+INFO: ## Decoding Procedure Started ##
+INFO: Opening required files
+INFO: Opened stego.bmp
+INFO: Decoding Magic String Signature
+INFO: Magic string verified successfully
+INFO: Decoding Output File Extension
+INFO: Decoding decoded.txt File Data
+INFO: ## Decoding Done Successfully ##
+
+Decoding is successful!
 
 ## Author
 Afifa Tabassum
