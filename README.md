@@ -8,10 +8,10 @@ A simple Image Steganography project developed in C that hides and extracts secr
 - Command line based execution
 - Error handling for invalid inputs
 
-## Technologies Used
-- C Programming
-- File Handling
-- Bitwise Operations
+## Algorithm Used
+- Least Significant Bit (LSB) technique
+- Bitwise operations for data encoding
+- File handling for reading and writing BMP files
 
 ## How to Compile
 gcc main.c encode.c decode.c -o stego
